@@ -8,7 +8,9 @@
 
 def add_numbers(a, b):
     # Your code here
-    pass
+    sum = a+b
+    print(sum)
+    #pass
 
 # Exercise 2: Return Values
 # Instructions:
@@ -20,7 +22,11 @@ def add_numbers(a, b):
 
 def calculate_sum(numbers):
     # Your code here
-    pass
+    cal_sum = 0
+    for number in numbers:
+        cal_sum+=number
+    return cal_sum
+    #pass
 
 # Exercise 3: Function Scoping
 # Instructions:
@@ -33,8 +39,10 @@ global_variable = "I am a global variable"
 
 def demonstrate_scoping():
     # Define a local variable here
+    local_variable = "I am a local variable"
     # Print both the global and local variables
-    pass
+    print(f"Give it up for: {global_variable} and {local_variable}")
+    #pass
 
 # Exercise 4: Function Libraries
 # Instructions:
@@ -47,15 +55,15 @@ def demonstrate_scoping():
     # and another that calculates the area of a circle.
 
 # Import your custom function library
-
+from area import rectangle_area, circle_area
 
 def calculate_area(length, width, radius):
     # Example 1: 
-    area_rectangle = 1 # Use the rectangle_area function from the Python module you created 
+    area_rectangle = rectangle_area(length, width) # Use the rectangle_area function from the Python module you created 
     print("Area of the rectangle:", area_rectangle)
 
     # Example 2: 
-    area_circle = 2 # Use the circle_area function from the Python module you created
+    area_circle = circle_area(radius) # Use the circle_area function from the Python module you created
     print("Area of the circle:", area_circle)
 
 if __name__ == "__main__":
